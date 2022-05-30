@@ -130,7 +130,7 @@ li>input[type="checkbox"] {
     margin: 0 10px;
 }
 
-li>label {
+li>p {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
@@ -152,7 +152,7 @@ li>input[type="text"] {
 }
 
 /* Completed */
-#completed-tasks label {
+#completed-tasks p {
     text-decoration: line-through; 
     color: #888;
 }
@@ -167,6 +167,6 @@ ul li input[type=text] {
     width: 224px;
 }
 
-.edit-mode label {
+.edit-mode p {
     display: none;
 }
