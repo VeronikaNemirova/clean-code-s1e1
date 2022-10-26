@@ -22,7 +22,7 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
-    var label=document.createElement("label");//label
+    var label=document.createElement("p");//label
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit
@@ -81,8 +81,8 @@ var addTask=function(){
 //Edit an existing task.
 
 var editTask=function(){
-    // console.log("Edit Task...");
-    // console.log("Change 'edit' to 'save'");
+    console.log("Edit Task...");
+    console.log("Change 'edit' to 'save'");
 
 
     var listItem=this.parentNode;
@@ -92,6 +92,7 @@ var editTask=function(){
     var editBtn=listItem.querySelector(".button_edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
+    console.log(listItem);
     if(containsClass){
 
         //switch to .editmode
@@ -152,9 +153,9 @@ var ajaxRequest=function(){
 
 
 //Set the click handler to the addTask function.
-// addButton.onclick=addTask;
+addButton.onclick=addTask;
 addButton.addEventListener("click",() => addTask());
-// addButton.addEventListener("click",ajaxRequest);
+addButton.addEventListener("click",ajaxRequest);
 
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
